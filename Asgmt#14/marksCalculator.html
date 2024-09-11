@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Marks Calculator</title>
+</head>
+<body>
+    <script>
+        // a) Take three subject names from the user
+        var subject1 = prompt("Enter the name of the first subject:");
+        var subject2 = prompt("Enter the name of the second subject:");
+        var subject3 = prompt("Enter the name of the third subject:");
+
+        // b) Total marks for each subject (assuming 100 marks per subject)
+        var totalMarksPerSubject = 100;
+
+        // c) Take obtained marks for the first subject
+        var obtainedMarks1 = parseInt(prompt("Enter the obtained marks for " + subject1 + ":"));
+
+        // d) Take obtained marks for the remaining 2 subjects
+        var obtainedMarks2 = parseInt(prompt("Enter the obtained marks for " + subject2 + ":"));
+        var obtainedMarks3 = parseInt(prompt("Enter the obtained marks for " + subject3 + ":"));
+
+        // e) Calculate total marks and percentage
+        var totalObtainedMarks = obtainedMarks1 + obtainedMarks2 + obtainedMarks3;
+        var totalMarks = totalMarksPerSubject * 3;  // Total marks for three subjects
+        var percentage = (totalObtainedMarks / totalMarks) * 100;
+
+        // Generate the result in an HTML table
+        var result = "<h2>Marks Report</h2>";
+        result += "<table border='1' cellpadding='5' cellspacing='0'>";
+        result += "<tr><th>Subject</th><th>Obtained Marks</th><th>Total Marks</th></tr>";
+        result += "<tr><td>" + subject1 + "</td><td>" + obtainedMarks1 + "</td><td>" + totalMarksPerSubject + "</td></tr>";
+        result += "<tr><td>" + subject2 + "</td><td>" + obtainedMarks2 + "</td><td>" + totalMarksPerSubject + "</td></tr>";
+        result += "<tr><td>" + subject3 + "</td><td>" + obtainedMarks3 + "</td><td>" + totalMarksPerSubject + "</td></tr>";
+        result += "<tr><td><strong>Total</strong></td><td><strong>" + totalObtainedMarks + "</strong></td><td><strong>" + totalMarks + "</strong></td></tr>";
+        result += "<tr><td colspan='3'><strong>Percentage: " + percentage.toFixed(2) + "%</strong></td></tr>";
+        result += "</table>";
+
+        // Display the result
+        document.write(result);
+    </script>
+</body>
+</html>
