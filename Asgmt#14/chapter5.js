@@ -32,10 +32,17 @@ document.write("<br>Total cost to buy 5 tickets to a movie is: ", price_of_5, "P
 // q5
 var table = 4; 
 document.write(`<br> Table of ${table}<br>`)
-for (let index = 1; index <= 10; index++) {
-    const result = table * index;
-    document.write(table + " x " + index + " = " + result + "<br>");
-}
+document.write(`<br>${table} x 1 = ${table * 1}`)
+document.write(`<br>${table} x 2 = ${table * 2}`)
+document.write(`<br>${table} x 3 = ${table * 3}`)
+document.write(`<br>${table} x 4 = ${table * 4}`)
+document.write(`<br>${table} x 5 = ${table * 5}`)
+document.write(`<br>${table} x 6 = ${table * 6}`)
+document.write(`<br>${table} x 7 = ${table * 7}`)
+document.write(`<br>${table} x 8 = ${table * 8}`)
+document.write(`<br>${table} x 9 = ${table * 9}`)
+document.write(`<br>${table} x 10 = ${table * 10}<br>`)
+
 
 // q6
 var valCelsius = 25
@@ -99,10 +106,14 @@ document.write("<br>The circumference is " + circumference);
 document.write("<br>The area is " + area + "<br>");
 
 // q13
-var favoriteSnack = "chocolate chip cookies";
-var currentAge = 25;
-var maxAge = 80;
+var favoriteSnack = "Gulab Jamun";
+var currentAge = 15;
+var maxAge = 65;
 var amountPerDay = 3;
 var yearsRemaining = maxAge - currentAge;
 var totalSnacks = yearsRemaining * 365 * amountPerDay;
-document.write("You will need " + totalSnacks + " " + favoriteSnack + " to last you until the ripe old age of " + maxAge + ".");
+document.write(`<br>Favorite Snack: ${favoriteSnack}`)
+document.write(`<br>Current Age: ${currentAge}`)
+document.write(`<br>Estimated Maximum Age: ${maxAge}`)
+document.write(`<br>Amount of snacks per day: ${amountPerDay}`)
+document.write(`<br>You will need ${totalSnacks} ${favoriteSnack} to last you until the ripe old age of ${maxAge}`);

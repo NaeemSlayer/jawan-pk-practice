@@ -1,41 +1,44 @@
-// home
-// chapter 6
+// homework
+// Chapter 6 (Math Expression II)
 // q1
-x += 1;
+document.write(`x += 1;`)
 
 // q2
-x--;
+document.write(`<br>x--;`)
 
 // q3
-var x = 50;
-var y = x++;
+document.write(`<br>var x = 50; <br> var y = x++;`)
 
 // q4
-var y = 50;
-var z = --y;
+document.write(`<br>var y = 50 <br>
+var z = --y`)
 
 // q5
-newNum = num--;
+document.write(`<br>newNum = num--`)
 
 // q6
-anotherVar = myVar++;
+document.write(`<br>anotherVar = myVar++;`)
 
 // q7
-var num = 10;  
-num++;         
-document.write(num);    
+document.write(`<br>var num = 10;  
+<br>num++;         
+<br>document.write(num);`)    
 
 // chapter 7
 // q5
-var cost = (2 + 2) * (4 + 10);
+document.write(`<br>var cost = (2 + 2) * (4 + 10);`)
 
 // q6
-var units = 2 + (2 * 4) + 10;
+document.write(`<br>var units = 2 + (2 * 4) + 10;`)
 
 // q7
-var pressure = 4 / (2 * 4);
+document.write(`<br>var pressure = 4 / (2 * 4);`)
 
 // chapter 8
+// q1
+var num = "2" + "2";
+alert(num)
+
 // q2
 var message = "Hello," + "Dolly";
 alert(message);
