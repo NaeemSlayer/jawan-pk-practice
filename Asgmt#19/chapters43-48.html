@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Assignment #19</title>
+    <style>
+      body {
+        padding-left: 30px;
+      }
+      h1 {
+        color: rgb(0, 98, 255);
+      }
+      div {
+        display: flex;
+        justify-content: flex-start;
+        align-items: center;
+        flex-direction: row;
+        padding-top: 20px;
+        gap: 20px;
+      }
+      img {
+        width: 200px;
+        height: 200px;
+        border: 2px solid rgb(0, 98, 255);
+      }
+      .pic {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+      }
+      .pic h3 {
+        margin: 5px 0;
+      }
+      .pic h3 a {
+        text-decoration: none;
+        font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS",
+          sans-serif;
+      }
+      .table {
+        margin-top: 20px;
+      }
+      .img-changer {
+        margin-top: 20px;
+      }
+      .counter-btn-task {
+        margin-top: 20px;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>Mobile Phone Lookup</h1>
+    <div>
+      <div class="pic">
+        <a href="#" onclick="showAlert()">
+          <img
+            src="https://www.mega.pk/items_images/Apple+iPhone+15+Pro+Max_-_24629.webp"
+            alt="iPhone 15"
+          />
+          <h3>iPhone</h3>
+        </a>
+      </div>
+      <div class="pic">
+        <a href="#" onclick="showAlert()">
+          <img
+            src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSdWjqjpZ6iTOQ8gdGLEAtyYb7haAQLW7xsFQ&s"
+            alt="Samsung Galaxy S22"
+          />
+          <h3>Samsung</h3>
+        </a>
+      </div>
+      <div class="pic">
+        <a href="#" onclick="showAlert()">
+          <img
+            src="https://www.mega.pk/items_images/ONEPLUS+11+16GB+RAM+512GB+Storage+Non+PTA+Price+in+Pakistan%2C+Specifications%2C+Features_-_24139.webp"
+            alt="OnePlus 11"
+          />
+          <h3>OnePlus</h3>
+        </a>
+      </div>
+      <div class="pic">
+        <a href="#" onclick="showAlert()">
+          <img
+            src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR2D4Y-h9wu6oTKDjZUtrVBu73CtBgizYgUWA&s"
+            alt="Huawei"
+          />
+          <h3>Huawei</h3>
+        </a>
+      </div>
+    </div>
+
+    <div class="table">
+      <h2>Student Records</h2>
+      <table cellspacing="0" cellpadding="0" border="1" id="studentTable">
+        <tr>
+          <th>Index</th>
+          <th>Name</th>
+          <th>Class</th>
+          <th>Action</th>
+        </tr>
+        <tr>
+          <td>0</td>
+          <td>John</td>
+          <td>10</td>
+          <td><button onclick="deleteRow(this)">Delete</button></td>
+        </tr>
+        <tr>
+          <td>1</td>
+          <td>Doe</td>
+          <td>9</td>
+          <td><button onclick="deleteRow(this)">Delete</button></td>
+        </tr>
+        <tr>
+          <td>2</td>
+          <td>Mark</td>
+          <td>10</td>
+          <td><button onclick="deleteRow(this)">Delete</button></td>
+        </tr>
+        <tr>
+          <td>3</td>
+          <td>James</td>
+          <td>8</td>
+          <td><button onclick="deleteRow(this)">Delete</button></td>
+        </tr>
+      </table>
+    </div>
+
+    <div class="img-changer">
+      <h2>Hover over the image</h2>
+      <img
+        id="hoverImage"
+        src="https://images-wixmp-ed30a86b8c4ca887773594c2.wixmp.com/f/9cd772c6-96ce-4561-aafc-e8e4d50eaa43/dfle3cd-961c063f-1b19-4916-8bec-625f583696e5.png"
+        alt="Original Image"
+        onmouseover="changeImage()"
+        onmouseout="resetImage()"
+      />
+    </div>
+
+    <div class="counter-btn-task">
+      <h2>Counter</h2>
+      <p>Counter Value: <span id="counterValue">0</span></p>
+      <button onclick="increaseCounter()">Increase</button>
+      <button onclick="decreaseCounter()">Decrease</button>
+    </div>
+
+    <script src="chapters43-48.js"></script>
+  </body>
+</html>
