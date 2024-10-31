@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Stopwatch</title>
+    <title>Todo List</title>
     <link rel="stylesheet" href="style.css" />
     <link
       rel="stylesheet"
@@ -12,31 +12,37 @@
       crossorigin="anonymous"
       referrerpolicy="no-referrer"
     />
-    <link rel="shortcut icon" href="https://img.icons8.com/?size=100&id=YJRLDGN3QPEn&format=png&color=000000" type="image/x-icon">
+    <link
+      rel="shortcut icon"
+      href="https://img.icons8.com/?size=100&id=13550&format=png&color=000000"
+      type="image/x-icon"
+    />
   </head>
   <body>
-    <div>
-      <h1>Stop Watch <i class="fa-solid fa-stopwatch"></i></h1>
+    <!-- Main container for the todo app -->
+    <div class="container">
+      <h1>Todo App <i class="fa-solid fa-list"></i></h1>
+
+      <!-- Input section for adding new todo -->
+      <div class="input-section">
+        <input
+          type="text"
+          id="todoInput"
+          placeholder="Enter task here..."
+          class="todo-input"
+        />
+        <button onclick="todoApp.addTask()" class="btn btn-add">
+          Add Task <i class="fa-regular fa-pen-to-square"></i>
+        </button>
+        <button onclick="todoApp.deleteAllTasks()" class="btn btn-clear">
+          Clear All <i class="fa-solid fa-trash-can"></i>
+        </button>
+      </div>
+
+      <!-- List container for todo items -->
+      <ul id="taskList" class="task-list"></ul>
     </div>
-    <div class="time-display">
-      <h1 id="hour" class="time-unit">0</h1>
-      <h1 id="min" class="time-unit">0</h1>
-      <h1 id="sec" class="time-unit">0</h1>
-      <h1 id="msec" class="time-unit">0</h1>
-    </div>
-    <div class="controls">
-      <button id="startButton" onclick="start()">
-        <i class="fa-solid fa-hourglass-start"></i> Start
-      </button>
-      <button onclick="stop()">
-        <i class="fa-solid fa-hourglass-end"></i> Stop
-      </button>
-      <button onclick="lap()"><i class="fa-solid fa-flag"></i> Lap</button>
-      <button onclick="reset()">
-        <i class="fa-solid fa-hourglass"></i> Reset
-      </button>
-    </div>
-    <div id="lapList" class="lap-list"></div>
+
+    <script src="app.js"></script>
   </body>
-  <script src="app.js"></script>
 </html>
